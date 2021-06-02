@@ -26,7 +26,6 @@ public class MemberService {
 //        result.ifPresent(m -> {
 //            throw new IllegalStateException("이미 존재하는 회원 입니다.")
 //        });
-
         validateDuplicateMember(member); // 중복 회원 검증
         memberRepository.save(member);
         return member.getId();
